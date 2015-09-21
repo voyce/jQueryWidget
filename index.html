@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/jquery-ui/ui/widget.js"></script>
+	<script src="bower_components/jquery-ui/ui/progressbar.js"></script>
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+	div {
+		font-family: 'Share Tech';
+	}
+	.svgprogress {
+		margin-bottom: -4px;
+		height: 100%;
+		stroke-width:12px;
+		stroke:#349450;
+		fill:none;
+	}
+	.progresstext {
+		fill:#349450;
+		font-family: 'Share Tech';
+	}
+	body {
+		margin-top:50px;
+	}
+	</style>
+	<link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+	</head>
+<body>
+	<div>Click to increase...</div>
+	<div id="main"></div>
+</body>
+<script src="control.js"></script> 
+<script type="text/javascript">
+$(function(){
+	var ctl = $("#main").svgprogress({
+			max : 200,
+			value: 10,
+		}).bind("click", function(){
+			// Move it on by 10 units whenever we click
+			$(this).svgprogress("value", $(this).svgprogress("value") + 10);
+		});
+});
+</script>
+</html>

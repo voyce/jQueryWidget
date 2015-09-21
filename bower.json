@@ -1,0 +1,16 @@
+{
+  "name": "elasticcomplete",
+  "version": "0.0.0",
+  "authors": [
+    "ian@voyce.email"
+  ],
+  "license": "MIT",
+  "homepage": "ianvoyce.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
